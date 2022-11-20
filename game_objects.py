@@ -37,10 +37,3 @@ def get_winner(player1, player2):
             return player2
 
 
-def parse_move_string(trigger):
-    if trigger.endswith('rock'):
-        return "Rock"
-    elif trigger.endswith('paper'):
-        return "Paper"
-    elif trigger.endswith('scissors'):
-        return "Scissors"
