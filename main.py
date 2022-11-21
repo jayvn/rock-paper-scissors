@@ -96,11 +96,11 @@ if __name__ == '__main__':
             result = 'Tie!'
         else:
             winner.add_score()
-            scoreboard = f'Scoreboard--:>  {player1.name} : [ {player1.score} ] |  {player2.name} : [ {player2.score} ]'
-            who_played_what = f'{player1.name} played {player1.move} and {player2.name} played {player2.move}'
             result = f'{winner.name} wins! Start a new round by playing a move.'
-            player1.move = player2.move = None
 
+        scoreboard = f'Scoreboard--:>  {player1.name} : [ {player1.score} ] |  {player2.name} : [ {player2.score} ]'
+        who_played_what = f'{player1.name} played {player1.move} and {player2.name} played {player2.move}'
+        player1.move = player2.move = None
         return scoreboard, result, who_played_what
 
 
