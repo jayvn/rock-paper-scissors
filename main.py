@@ -8,6 +8,16 @@ from dash.dependencies import Output, Input
 from app_layout import layout
 from game_objects import Player, get_winner
 
+
+def parse_move_string(trigger):
+    if trigger.endswith('rock'):
+        return "Rock"
+    elif trigger.endswith('paper'):
+        return "Paper"
+    elif trigger.endswith('scissors'):
+        return "Scissors"
+
+
 if __name__ == '__main__':
     player1 = Player("Player 1")
     player2 = Player("Player 2")
@@ -115,12 +125,3 @@ if __name__ == '__main__':
 
 
     app.run_server(debug=True)
-
-
-def parse_move_string(trigger):
-    if trigger.endswith('rock'):
-        return "Rock"
-    elif trigger.endswith('paper'):
-        return "Paper"
-    elif trigger.endswith('scissors'):
-        return "Scissors"
